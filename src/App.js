@@ -1,9 +1,34 @@
-function App() {
+import React, { useState } from "react";
+import { Header } from "./Header";
+import { Main } from "./Main";
+import { Footer } from "./Footer";
+import { Hr } from "./Hr";
+
+import { AppContext } from "./Context";
+
+import backgroundURL from "./images/background-stars.svg";
+
+const App = () => {
+  const [active, setActive] = useState(0);
+
   return (
-    <div className="App flex justify-center">
-      <h1 className="text-blue-600 text-4xl">Hello to Frontend Mentor Bootstrap</h1>
-    </div>
+    <AppContext.Provider value={{ active, setActive }}>
+      <div
+        className="flex flex-col w-full items-center bg-background text-neutral-100 font-spartan text-14 leading-25 font-normal"
+        style={{
+          backgroundImage: `url(${backgroundURL})`,
+          backgroundPosition: "center center",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "100% 100%",
+        }}
+      >
+        <Header />
+        <Hr />
+        <Main />
+        <Footer />
+      </div>
+    </AppContext.Provider>
   );
-}
+};
 
 export default App;

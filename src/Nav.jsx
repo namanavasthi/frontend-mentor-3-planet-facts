@@ -13,7 +13,7 @@ import { useAppContext } from "./Context";
 export const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const { setActive } = useAppContext();
+  const { setActivePlanet } = useAppContext();
 
   const Planet = ({ index, name }) => {
     return (
@@ -21,7 +21,7 @@ export const Nav = () => {
         className="flex items-center py-5 w-full"
         onClick={() => {
           setIsOpen(false);
-          setActive(index);
+          setActivePlanet(index);
         }}
       >
         <div className={`w-5 h-5 rounded-full bg-planets-${index}`}></div>

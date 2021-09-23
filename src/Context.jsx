@@ -1,6 +1,12 @@
 import { createContext, useContext } from "react";
 
-export const defaultContextValue = { active: 0, setActive: (index) => {} };
+export const tabs = ["Overview", "Structure", "Surface"];
+export const defaultContextValue = {
+  activePlanet: 0,
+  setActivePlanet: (index) => {},
+  currentTab: tabs[0],
+  setCurrentTab: (tabName) => {},
+};
 
 export const AppContext = createContext(defaultContextValue);
 export const useAppContext = () => useContext(AppContext);

@@ -4,15 +4,17 @@ import { Main } from "./Main";
 import { Footer } from "./Footer";
 import { Hr } from "./Hr";
 
-import { AppContext } from "./Context";
+import { AppContext, tabs } from "./Context";
 
 import backgroundURL from "./images/background-stars.svg";
 
 const App = () => {
-  const [active, setActive] = useState(0);
+  const [activePlanet, setActivePlanet] = useState(0);
+
+  const [currentTab, setCurrentTab] = useState(tabs[0]);
 
   return (
-    <AppContext.Provider value={{ active, setActive }}>
+    <AppContext.Provider value={{ activePlanet, setActivePlanet, currentTab, setCurrentTab }}>
       <div
         className="flex flex-col w-full items-center bg-background text-neutral-100 font-spartan text-14 leading-25 font-normal"
         style={{

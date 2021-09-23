@@ -1,25 +1,29 @@
 import React from "react";
 
 import { Hr } from "./Hr";
-import { Wrapper } from "./Wrapper";
+import { Tabs } from "./Tabs";
+import { Overview } from "./Overview";
+import { Structure } from "./Structure";
+import { Surface } from "./Surface";
+
+import { useAppContext } from "./Context";
+
+const component = {
+  Overview: Overview,
+  Structure: Structure,
+  Surface: Surface,
+};
 
 export const Main = () => {
+  const { currentTab } = useAppContext();
+
+  const Content = component[currentTab];
+
   return (
     <main className="w-full">
-      <Wrapper>
-        <section className="options">
-          <button>
-            <h3>overview</h3>
-          </button>
-          <button>
-            <h3>structure</h3>
-          </button>
-          <button>
-            <h3>surface</h3>
-          </button>
-        </section>
-      </Wrapper>
-      <Hr />
+      <Tabs />
+      <Hr style={{ marginTop: "-1px" }} />
+      <Content />
     </main>
   );
 };

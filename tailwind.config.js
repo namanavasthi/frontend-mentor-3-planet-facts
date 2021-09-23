@@ -47,12 +47,14 @@ module.exports = {
         14: "14px",
         12: "12px",
         11: "11px",
+        9: "9px",
       },
       lineHeight: {
         103: "103px",
         52: "52px",
         36: "36px",
         25: "25px",
+        10: "10px",
       },
       letterSpacing: {
         100: "-1.05px",

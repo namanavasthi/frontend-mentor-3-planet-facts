@@ -3,6 +3,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      borderWidth: {
+        1: "1px",
+      },
       colors: {
         background: "#070724",
         neutral: {
@@ -48,17 +51,22 @@ module.exports = {
         12: "12px",
         11: "11px",
         9: "9px",
+        8: "8px",
       },
       lineHeight: {
         103: "103px",
         52: "52px",
         36: "36px",
         25: "25px",
+        22: "22px",
+        16: "16px",
         10: "10px",
       },
       letterSpacing: {
         100: "-1.05px",
         200: "-1.5px",
+        225: "-0.75px",
+        250: "0.73px",
         300: "1px",
         400: "1.36px",
         500: "2.6px",

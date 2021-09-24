@@ -21,7 +21,7 @@ const App = () => {
           backgroundImage: `url(${backgroundURL})`,
           backgroundPosition: "center center",
           backgroundRepeat: "no-repeat",
-          backgroundSize: "100% 100%",
+          backgroundSize: "cover",
         }}
       >
         <Header />

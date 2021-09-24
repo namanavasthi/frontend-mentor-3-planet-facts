@@ -38,7 +38,7 @@ export const Nav = () => {
       <button className="flex items-center text-neutral-100 focus:text-neutral-400" onClick={() => setIsOpen(!isOpen)}>
         <Hamburger className="fill-current bg-transparent" />
       </button>
-      <aside className={`fixed left-0 top-0 mt-20 bg-background h-full w-full ${isOpen ? "" : "hidden"}`}>
+      <aside className={`fixed left-0 top-0 mt-20 bg-background z-10 h-full w-full ${isOpen ? "" : "hidden"}`}>
         <ul className="p-6 font-spartan bold text-15 leading-25 tracking-400 font-bold">
           {data.map((planet, i) => (
             <li key={i}>

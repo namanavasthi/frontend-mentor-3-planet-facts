@@ -1,22 +1,45 @@
 import React from "react";
 import { Wrapper } from "./Wrapper";
 
-import { useAppContext, tabs } from "./Context";
+import { useAppContext } from "./Context";
+
+export const TabMapper = [
+  {
+    name: "overview",
+    component: "Overview",
+    desktopName: "overview",
+    dataAttribute: "overview",
+  },
+  {
+    name: "structure",
+    component: "Structure",
+    desktopName: "structure",
+    dataAttribute: "structure",
+  },
+  {
+    name: "surface",
+    component: "Surface",
+    desktopName: "surface",
+    dataAttribute: "geology",
+  },
+];
 
 export const Tabs = () => {
-  const { currentTab, setCurrentTab } = useAppContext();
+  const { currentTab, setCurrentTab, activePlanet } = useAppContext();
 
   return (
     <Wrapper>
       <section className="tabs flex justify-around">
-        {tabs.map((tab, i) => (
-          <button key={i} onClick={() => setCurrentTab(tab)} className="p-6 pb-0">
+        {TabMapper.map((tab, i) => (
+          <button key={i} onClick={() => setCurrentTab(i)} className="p-6 pb-0">
             <h3
               className={`uppercase font-spartan text-9 leading-10 tracking-400 font-bold pb-4 px-1 border-solid border-b-4 ${
-                currentTab === tab ? "border-primary-100 text-neutral-100" : "border-transparent text-neutral-400"
+                currentTab === i
+                  ? `border-planets-${activePlanet} text-neutral-100`
+                  : "border-transparent text-neutral-400"
               }`}
             >
-              {tab}
+              {tab.name}
             </h3>
           </button>
         ))}

@@ -4,14 +4,14 @@ import { Main } from "./Main";
 import { Footer } from "./Footer";
 import { Hr } from "./Hr";
 
-import { AppContext, tabs } from "./Context";
+import { AppContext } from "./Context";
 
 import backgroundURL from "./images/background-stars.svg";
 
 const App = () => {
   const [activePlanet, setActivePlanet] = useState(0);
 
-  const [currentTab, setCurrentTab] = useState(tabs[0]);
+  const [currentTab, setCurrentTab] = useState(0);
 
   return (
     <AppContext.Provider value={{ activePlanet, setActivePlanet, currentTab, setCurrentTab }}>

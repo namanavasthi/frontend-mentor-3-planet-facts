@@ -16,3 +16,4 @@
 - I guess it's a developer expectation that design system focuses more on mobile than desktop
 - NOT BEING ABLE TO INSPECT ELEMENTS AND SEE THE RELATIVE POSITIONING IS MY BIGGEST COMPLAIN! really sucks to not be able to see how much an element is padded wrt. another 😠
 - prefer zeplin specs over raw sketch/figma files
+- incomplete mobile renditions doesn't help either 😠

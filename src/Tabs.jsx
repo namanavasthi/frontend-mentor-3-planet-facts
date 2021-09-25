@@ -13,20 +13,19 @@ export const TabMapper = [
   {
     name: "structure",
     component: "Structure",
-    desktopName: "structure",
+    desktopName: "internal structure",
     dataAttribute: "structure",
   },
   {
     name: "surface",
     component: "Surface",
-    desktopName: "surface",
+    desktopName: "surface geology",
     dataAttribute: "geology",
   },
 ];
 
-export const Tabs = () => {
+const MobileTabs = () => {
   const { currentTab, setCurrentTab, activePlanet } = useAppContext();
-
   return (
     <Wrapper>
       <section className="tabs flex justify-around">
@@ -46,4 +45,53 @@ export const Tabs = () => {
       </section>
     </Wrapper>
   );
+};
+
+const DefaultTabs = () => {
+  const { currentTab, setCurrentTab, activePlanet } = useAppContext();
+  return (
+    <section className="tabs flex justify-center flex-col items-center w-1/2 pl-10 ">
+      {TabMapper.map((tab, i) => (
+        <button
+          key={i}
+          onClick={() => setCurrentTab(i)}
+          className={`border-1 border-neutral-white border-opacity-20 w-full p-3 m-2 ${
+            currentTab === i ? `bg-planets-${activePlanet}` : "bg-transparent"
+          }`}
+        >
+          <h3
+            className={`uppercase font-spartan text-9 tracking-400 leading-25 font-bold text-neutral-100 flex flex-row text-left`}
+          >
+            <span className="w-2/12 text-center">
+              {(i + 1).toLocaleString("en-US", {
+                minimumIntegerDigits: 2,
+                useGrouping: false,
+              })}
+            </span>
+            <span className="w-10/12 pl-2">{tab.desktopName}</span>
+          </h3>
+        </button>
+      ))}
+    </section>
+  );
+};
+
+export const Tabs = ({ variant = "" }) => {
+  const { windowWidth } = useAppContext();
+
+  const isMobile = windowWidth < 768;
+
+  if (variant === "mobile") {
+    if (isMobile) {
+      return <MobileTabs />;
+    } else {
+      return null;
+    }
+  } else {
+    if (!isMobile) {
+      return <DefaultTabs />;
+    } else {
+      return null;
+    }
+  }
 };

@@ -38,7 +38,7 @@ export const Nav = () => {
   };
 
   return (
-    <nav className="md:w-full">
+    <nav className="md:w-full lg:w-7/12">
       <button
         className="flex items-center text-neutral-100 focus:text-neutral-400 md:hidden"
         onClick={() => setIsOpen(!isOpen)}

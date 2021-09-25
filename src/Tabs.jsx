@@ -50,12 +50,12 @@ const MobileTabs = () => {
 const DefaultTabs = () => {
   const { currentTab, setCurrentTab, activePlanet } = useAppContext();
   return (
-    <section className="tabs flex justify-center flex-col items-center w-1/2 pl-10 ">
+    <section className="tabs flex justify-center flex-col items-center w-1/2 pl-10 lg:w-full lg:items-start lg:pl-0">
       {TabMapper.map((tab, i) => (
         <button
           key={i}
           onClick={() => setCurrentTab(i)}
-          className={`border-1 border-neutral-white border-opacity-20 w-full p-3 m-2 ${
+          className={`border-1 border-neutral-white border-opacity-20 w-full p-3 m-2 lg:mx-0 ${
             currentTab === i ? `bg-planets-${activePlanet}` : "bg-transparent"
           }`}
         >

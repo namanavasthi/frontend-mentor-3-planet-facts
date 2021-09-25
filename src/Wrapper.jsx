@@ -1,5 +1,5 @@
 import React from "react";
 
 export const Wrapper = ({ className, children }) => {
-  return <div className={`max-w-7xl w-full md:max-w-screen-md ${className}`}>{children}</div>;
+  return <div className={`w-full md:max-w-screen-md lg:max-w-7xl ${className ? className : ""}`}>{children}</div>;
 };

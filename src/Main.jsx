@@ -34,26 +34,29 @@ export const Main = () => {
     <main className="w-full">
       <Tabs variant="mobile" />
       <Hr style={{ marginTop: "-1px" }} />
+      <Wrapper className="lg:mx-auto">
+        <section className="overview flex flex-col items-center px-4 lg:w-full lg:justify-center">
+          <div className="lg:w-full lg:flex lg:items-center lg:justify-center">
+            <div className="h-96 w-full flex justify-center items-center md:max-w-sm lg:w-1/2 lg:h-full">
+              <Suspense fallback={<>Loading...</>}>
+                <Content activePlanet={activePlanet} planetWidth={planetWidth} />
+              </Suspense>
+            </div>
 
-      <section className="overview flex flex-col items-center px-4">
-        <div className="h-96 w-full flex justify-center items-center md:max-w-sm">
-          <Suspense fallback={<>Loading...</>}>
-            <Content activePlanet={activePlanet} planetWidth={planetWidth} />
-          </Suspense>
-        </div>
+            <div className="md:flex md:flex-row md:justify-between md:p-6 lg:w-1/2 lg:flex-col lg:pt-24">
+              <Article name={currentPlanet.name} info={info(currentTab)} />
+              <Tabs />
+            </div>
+          </div>
 
-        <Wrapper className="md:flex md:flex-row md:justify-between md:p-6">
-          <Article name={currentPlanet.name} info={info(currentTab)} />
-          <Tabs />
-        </Wrapper>
-
-        <Stats
-          rotation={currentPlanet.rotation}
-          revolution={currentPlanet.revolution}
-          radius={currentPlanet.radius}
-          temperature={currentPlanet.temperature}
-        />
-      </section>
+          <Stats
+            rotation={currentPlanet.rotation}
+            revolution={currentPlanet.revolution}
+            radius={currentPlanet.radius}
+            temperature={currentPlanet.temperature}
+          />
+        </section>
+      </Wrapper>
     </main>
   );
 };

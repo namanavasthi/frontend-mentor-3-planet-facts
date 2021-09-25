@@ -17,3 +17,4 @@
 - NOT BEING ABLE TO INSPECT ELEMENTS AND SEE THE RELATIVE POSITIONING IS MY BIGGEST COMPLAIN! really sucks to not be able to see how much an element is padded wrt. another 😠
 - prefer zeplin specs over raw sketch/figma files
 - incomplete mobile renditions doesn't help either 😠
+- couldn't work for long on desktop comps, had some family biz to take care of. isn't as good as i'd want it to be

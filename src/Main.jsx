@@ -36,7 +36,7 @@ export const Main = () => {
       <Hr style={{ marginTop: "-1px" }} />
       <Wrapper className="lg:mx-auto">
         <section className="overview flex flex-col items-center px-4 lg:w-full lg:justify-center">
-          <div className="lg:w-full lg:flex lg:items-center lg:justify-center">
+          <div className="flex flex-col items-center lg:w-full lg:flex lg:items-center lg:justify-center">
             <div className="h-96 w-full flex justify-center items-center md:max-w-sm lg:w-1/2 lg:h-full">
               <Suspense fallback={<>Loading...</>}>
                 <Content activePlanet={activePlanet} planetWidth={planetWidth} />

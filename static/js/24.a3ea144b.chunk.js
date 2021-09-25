@@ -1,0 +1,2 @@
+(this["webpackJsonpfrontend-mentor-3-planet-facts"]=this["webpackJsonpfrontend-mentor-3-planet-facts"]||[]).push([[24],{32:function(t,e,n){"use strict";n.r(e),e.default=n.p+"static/media/geology-mars.d3ffce8e.png"}}]);
+//# sourceMappingURL=24.a3ea144b.chunk.js.map

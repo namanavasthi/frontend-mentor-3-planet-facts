@@ -1,0 +1,2 @@
+(this["webpackJsonpfrontend-mentor-3-planet-facts"]=this["webpackJsonpfrontend-mentor-3-planet-facts"]||[]).push([[21],{22:function(t,n,a){"use strict";a.r(n),n.default=a.p+"static/media/planet-venus-internal.1a94aa02.svg"}}]);
+//# sourceMappingURL=21.42aefd5e.chunk.js.map

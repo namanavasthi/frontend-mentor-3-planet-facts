@@ -1,0 +1,2 @@
+(this["webpackJsonpfrontend-mentor-3-planet-facts"]=this["webpackJsonpfrontend-mentor-3-planet-facts"]||[]).push([[3],{13:function(t,e,n){"use strict";n.r(e),e.default=n.p+"static/media/planet-mercury.1fce205c.svg"}}]);
+//# sourceMappingURL=3.51c9220e.chunk.js.map

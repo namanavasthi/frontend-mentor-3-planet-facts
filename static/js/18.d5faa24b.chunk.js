@@ -1,0 +1,2 @@
+(this["webpackJsonpfrontend-mentor-3-planet-facts"]=this["webpackJsonpfrontend-mentor-3-planet-facts"]||[]).push([[18],{28:function(t,e,n){"use strict";n.r(e),e.default=n.p+"static/media/planet-neptune-internal.3ebd623e.svg"}}]);
+//# sourceMappingURL=18.d5faa24b.chunk.js.map

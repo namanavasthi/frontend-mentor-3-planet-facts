@@ -1,8 +1,14 @@
 # Frontend Mentor : Planets Fact Site Challenge
 
-## Challenge
-
-[challenege site url](https://www.frontendmentor.io/challenges/planets-fact-site-gazqN8w_f)
+```
+Name : Planets fact site
+Description : In this challenge, you'll be building out an 8-page fact site
+              for all planets in our solar system. This project will make an
+              incredible portfolio piece when completed!
+Difficulty : 3-INTERMEDIATE
+Status: Complete
+Challenge : https://www.frontendmentor.io/challenges/planets-fact-site-gazqN8w_f
+```
 
 ## Thoughts
 
